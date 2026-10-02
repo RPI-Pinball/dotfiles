@@ -15,6 +15,7 @@ HISTSIZE=10000
 
 shopt -s histappend
 shopt -s autocd
+shopt -s checkwinsize
 
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
