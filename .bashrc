@@ -4,6 +4,11 @@ case $- in
       *) return;;
 esac
 
+if [[ -z "$TMUX" ]] && [[ -z "$NO_TMUX" ]] &&
+   [[ "$TERM" != "dumb" ]] && command -v tmux >/dev/null; then
+   exec tmux new-session -A -s main
+fi
+
 HISTCONTROL=ignoreboth
 HISTFILESIZE=20000
 HISTSIZE=10000
