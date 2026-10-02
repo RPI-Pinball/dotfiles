@@ -30,6 +30,8 @@ alias rg="rg -N --no-heading"
 
 alias sudo="sudo "
 
+alias rebuild="sudo nixos-rebuild switch --flake /etc/nixos#nixos"
+
 echo -e "\e]P0000000\cl"
 echo -e "\e]P1ED1515\cl"
 echo -e "\e]P211D116\cl"
@@ -47,6 +49,8 @@ echo -e "\e]PD8E44AD\cl"
 echo -e "\e]PE16A085\cl"
 echo -e "\e]PFFFFFFF\cl"
 echo -e "\ec\cl"
+
+export EDITOR=vim
 
 function f()
 {

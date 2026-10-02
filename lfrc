@@ -3,8 +3,11 @@ set ignorecase true
 set icons false
 set preview true
 set mouse false
+set shell bash
 
 map <enter> open
+
+set previewer cat
 
 cmd open &{{
     lf -remote "send $id \$$EDITOR \$fx"
@@ -43,7 +46,7 @@ cmd zip ${{
 cmd on-cd &{{
     bash -c '
     # display git repository status in your prompt
-    source /usr/lib/git-core/git-sh-prompt
+    source ~/.local/share/git-sh-prompt
     GIT_PS1_SHOWDIRTYSTATE=auto
     GIT_PS1_SHOWSTASHSTATE=auto
     GIT_PS1_SHOWUNTRACKEDFILES=auto
